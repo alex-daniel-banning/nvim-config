@@ -3,7 +3,7 @@ require("lspconfig").clangd.setup{}
 return {
   cmd = { 'clangd' },
   root_markers = { '.clangd', 'compile_commands.json' },
-  filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto'},
+  filetypes = { 'c', 'cpp', 'cxx', 'objc', 'objcpp', 'cuda', 'proto'},
   capabilities = {
 	  offsetEncoding = { "utf-8", "utf-16" },
 	  textDocument = {
