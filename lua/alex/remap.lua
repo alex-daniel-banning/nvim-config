@@ -32,3 +32,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>ca", function()
     require("cellular-automaton").start_animation("make_it_rain")
 end)
+
+-- in your keymaps.lua or telescope.lua
+-- vim.keymap.set('n', '<C-Tab>', ':bnext<CR>', { silent = true, desc = 'Next buffer' })
+-- vim.keymap.set('n', '<C-S-Tab>', ':bprevious<CR>', { silent = true, desc = 'Previous buffer' })
