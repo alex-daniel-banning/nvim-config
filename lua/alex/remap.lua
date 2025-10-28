@@ -36,3 +36,11 @@ end)
 -- in your keymaps.lua or telescope.lua
 -- vim.keymap.set('n', '<C-Tab>', ':bnext<CR>', { silent = true, desc = 'Next buffer' })
 -- vim.keymap.set('n', '<C-S-Tab>', ':bprevious<CR>', { silent = true, desc = 'Previous buffer' })
+
+
+-- Indent selected lines
+vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent selection" })
+
+-- Unindent selected lines
+vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Unindent selection" })
+
