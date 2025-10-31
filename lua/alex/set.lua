@@ -21,3 +21,5 @@ vim.opt.incsearch = true
 vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 500
+
+vim.opt.hlsearch = false
