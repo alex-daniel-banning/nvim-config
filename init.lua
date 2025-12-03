@@ -1,6 +1,7 @@
 require("config.lazy")
 require("alex")
 require("lsp")
+require("dap")
 
 -- todo, move to colors file (after/plugin/colors.lua?)
 -- better readable error messages
