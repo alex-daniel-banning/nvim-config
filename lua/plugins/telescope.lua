@@ -5,6 +5,13 @@ return {
     cmd = 'Telescope',
     keys = {
       { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
+      { '<leader>fd', function()
+            require('telescope.builtin').find_files({
+                find_command = { 'find', '.', '-type', 'd' },
+                prompt_title = 'Find Directories',
+                path_display = { 'truncate' },
+            })
+        end, desc = 'Find directories' },
       { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Search text' },
       { '<leader>b', '<cmd>Telescope buffers<cr>', desc = 'Switch buffer' },
       { '<leader>ld', '<cmd>Telescope diagnostics bufnr=0<cr>', desc = 'List diagnostic errors in buffer' },
