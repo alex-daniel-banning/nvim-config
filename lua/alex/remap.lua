@@ -44,3 +44,8 @@ vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent selection" })
 -- Unindent selected lines
 vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Unindent selection" })
 
+-- Keep cursor centered when scrolling
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-f>', '<C-f>zz')
+vim.keymap.set('n', '<C-b>', '<C-b>zz')
