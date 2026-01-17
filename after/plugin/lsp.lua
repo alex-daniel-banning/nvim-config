@@ -7,9 +7,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         -- Basic, common LSP mappings
         vim.keymap.set("n", "gd", function()
             vim.lsp.buf.definition()
-            vim.defer_fn(function()
-                vim.cmd("normal! zt")
-            end, 100)
         end, opts)
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
