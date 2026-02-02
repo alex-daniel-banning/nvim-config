@@ -4,7 +4,7 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     cmd = 'Telescope',
     keys = {
-      { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
+      { '<leader>ff', '<cmd>Telescope find_files hidden=true<cr>', desc = 'Find files' },
       { '<leader>fd', function()
             require('telescope.builtin').find_files({
                 find_command = { 'find', '.', '-type', 'd' },
@@ -16,7 +16,8 @@ return {
       { '<leader>b', '<cmd>Telescope buffers<cr>', desc = 'Switch buffer' },
       { '<leader>ld', '<cmd>Telescope diagnostics bufnr=0<cr>', desc = 'List diagnostic errors in buffer' },
       { '<leader>lD', '<cmd>Telescope diagnostics<cr>', desc = 'List diagnostic errors project-wide' },
-      { '<leader>le', '<cmd>lua vim.diagnostic.open_float()<cr>', desc = 'Go into floating buffer for error at cursor position' }
+      { '<leader>le', '<cmd>lua vim.diagnostic.open_float()<cr>', desc = 'Go into floating buffer for error at cursor position' },
+      { '<leader>ls', '<cmd>Telescope lsp_document_symbols<cr>', desc = 'List current document/buffer symbols' }
     },
     config = function()
       require('telescope').setup({
@@ -26,6 +27,12 @@ return {
           layout_config = { prompt_position = 'top' },
           path_display = { 'smart' },
         },
+        pickers = {
+          lsp_document_symbols = {
+            symbol_width = 50,
+            symbol_type_width = 12,
+          }
+        }
       })
     end,
   },
