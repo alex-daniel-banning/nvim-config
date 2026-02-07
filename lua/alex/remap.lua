@@ -16,6 +16,15 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+-- Copy filename / path to clipboard
+vim.keymap.set("n", "<leader>yf", function()
+    vim.fn.setreg("+", vim.fn.expand("%:t"))
+end, { desc = "Yank filename to clipboard" })
+
+vim.keymap.set("n", "<leader>yr", function()
+    vim.fn.setreg("+", vim.fn.expand("%:."))
+end, { desc = "Yank relative path to clipboard" })
+
 -- Project-wide navigation (Quicklist)
 vim.keymap.set("n", "<C-n>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-p>", "<cmd>cprev<CR>zz")
