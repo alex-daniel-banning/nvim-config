@@ -38,9 +38,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>]]
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- for fun. Need to install plugin before using
-vim.keymap.set("n", "<leader>ca", function()
-    require("cellular-automaton").start_animation("make_it_rain")
-end)
+--vim.keymap.set("n", "<leader>ca", function()
+--    require("cellular-automaton").start_animation("make_it_rain")
+--end)
 
 -- in your keymaps.lua or telescope.lua
 -- vim.keymap.set('n', '<C-Tab>', ':bnext<CR>', { silent = true, desc = 'Next buffer' })
